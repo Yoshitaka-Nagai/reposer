@@ -1,6 +1,28 @@
-//各ファイルは必ず登録済みの変数を最初に読み込みます
-//as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+#top {
+  .mv {
+    @media screen and (min-width: 1024px) {
+      height: calc(100vh - 120px);
+    }
 
+    &__img-wrap {
+      width: 75%;
+      margin-left: auto;
 
+      @media screen and (min-width: 1024px) {
+        height: 100%;
+      }
+    }
+
+    &__img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+
+      @media screen and (min-width: 1024px) {
+        height: 100%;
+      }
+    }
+  }
+}
