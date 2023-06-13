@@ -49,10 +49,12 @@
     height: 100%;
     padding: 0 9px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: $pink;
     color: $white;
+    font-family: $inter;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.3;
@@ -62,6 +64,10 @@
     @media screen and (min-width: 1280px) {
       width: 150px;
       font-size: 25px;
+    }
+
+    & span {
+      font-family: $noto-sans;
     }
   }
 }

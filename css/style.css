@@ -106,7 +106,7 @@ input, select {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   background: #fff;
   color: #000;
@@ -156,10 +156,12 @@ body {
   height: 100%;
   padding: 0 9px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #CE46B0;
   color: #fff;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
@@ -171,6 +173,9 @@ body {
     width: 150px;
     font-size: 25px;
   }
+}
+.header__reserve-link span {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .gnav {
@@ -228,6 +233,7 @@ body {
   padding: 10px 0;
   text-decoration: none;
   color: #fff;
+  font-family: "Inter", sans-serif;
   font-size: 25px;
   font-weight: 700;
 }
@@ -292,9 +298,18 @@ body {
   top: 65%;
 }
 
+#top .mv {
+  margin-bottom: 36px;
+}
+@media screen and (min-width: 768px) {
+  #top .mv {
+    margin-bottom: 75px;
+  }
+}
 @media screen and (min-width: 1280px) {
   #top .mv {
     height: 100vh;
+    margin-bottom: 240px;
   }
 }
 #top .mv__img {
@@ -306,5 +321,179 @@ body {
 @media screen and (min-width: 1280px) {
   #top .mv__img {
     height: 100%;
+  }
+}
+#top .coreheat {
+  padding: 0 5.3333333333%;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat {
+    padding: 0;
+    margin-bottom: 156px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #top .coreheat {
+    margin-bottom: 113px;
+  }
+}
+#top .coreheat__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__inner {
+    flex-direction: row;
+    gap: 0px;
+  }
+}
+#top .coreheat__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__box {
+    width: 50%;
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .coreheat__box {
+    padding: 0 7.5%;
+  }
+}
+#top .coreheat__ttl {
+  margin-bottom: 32px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+#top .coreheat__ttl::before, #top .coreheat__ttl::after {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: #000;
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__ttl {
+    margin-bottom: 72px;
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .coreheat__ttl {
+    margin-bottom: 100px;
+    font-size: 56px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #top .coreheat__ttl {
+    gap: 48px;
+    font-size: 64px;
+  }
+  #top .coreheat__ttl::before, #top .coreheat__ttl::after {
+    width: 50px;
+    height: 6px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #top .coreheat__ttl {
+    margin-bottom: 120px;
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__ttl {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .coreheat__ttl {
+    margin-bottom: 48px;
+  }
+}
+#top .coreheat__txt-wrap {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__txt-wrap {
+    margin-bottom: 42px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #top .coreheat__txt-wrap {
+    margin-bottom: 50px;
+  }
+}
+#top .coreheat__txt {
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+#top .coreheat__txt:last-of-type {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__txt {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .coreheat__txt {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #top .coreheat__txt {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #top .coreheat__txt {
+    font-size: 30px;
+  }
+}
+#top .coreheat__btn {
+  margin: 0 auto;
+  width: 100px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 39px;
+  background: #CE46B0;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  #top .coreheat__btn {
+    width: 150px;
+    height: 45px;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #top .coreheat__btn {
+    width: 170px;
+    height: 60px;
+    font-size: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

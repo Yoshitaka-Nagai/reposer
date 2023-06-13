@@ -1,4 +1,56 @@
-// settingフォルダの変数を読み込みます
-
 @use "../setting" as *;
 
+//見出しスタイル
+@mixin section-title($color: $black) {
+  margin-bottom: 32px;
+  color: $color;
+  font-family: $inter;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 30px;
+    height: 5px;
+    background: $black;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 72px;
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 100px;
+    font-size: 56px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 48px;
+    font-size: 64px;
+
+    &::before,
+    &::after {
+      width: 50px;
+      height: 6px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 120px;
+    font-size: 80px;
+  }
+}
+
+//画像スタイル
+@mixin img-base {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
