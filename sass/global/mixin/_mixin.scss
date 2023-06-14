@@ -2,16 +2,16 @@
 
 //見出しスタイル
 @mixin section-title($color: $black) {
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
   color: $color;
   font-family: $inter;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 2.4rem;
 
   &::before,
   &::after {
@@ -22,29 +22,19 @@
   }
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 72px;
-    font-size: 40px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    margin-bottom: 100px;
-    font-size: 56px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    gap: 48px;
-    font-size: 64px;
+    margin-bottom: 7.2rem;
+    font-size: 4rem;
 
     &::before,
     &::after {
-      width: 50px;
-      height: 6px;
+      width: 40px;
     }
   }
 
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 120px;
-    font-size: 80px;
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 12rem;
+    font-size: 8rem;
+    gap: 4rem;
   }
 }
 

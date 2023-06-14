@@ -105,6 +105,20 @@ input, select {
   vertical-align: middle;
 }
 
+html {
+  font-size: 2.6666666667vw;
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.3020833333vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 0.5208333333vw;
+  }
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
@@ -299,17 +313,17 @@ body {
 }
 
 #top .mv {
-  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
 }
 @media screen and (min-width: 768px) {
   #top .mv {
-    margin-bottom: 75px;
+    margin-bottom: 7.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #top .mv {
     height: 100vh;
-    margin-bottom: 240px;
+    margin-bottom: 24rem;
   }
 }
 #top .mv__img {
@@ -324,24 +338,24 @@ body {
   }
 }
 #top .coreheat {
-  padding: 0 5.3333333333%;
-  margin-bottom: 32px;
+  padding: 0 2rem;
+  margin-bottom: 3.2rem;
 }
 @media screen and (min-width: 768px) {
   #top .coreheat {
     padding: 0;
-    margin-bottom: 156px;
+    margin-bottom: 15.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #top .coreheat {
-    margin-bottom: 113px;
+    margin-bottom: 11.3rem;
   }
 }
 #top .coreheat__inner {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 3.6rem;
 }
 @media screen and (min-width: 768px) {
   #top .coreheat__inner {
@@ -360,28 +374,33 @@ body {
     width: 50%;
   }
 }
+#top .coreheat__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media screen and (min-width: 768px) {
   #top .coreheat__box {
     width: 50%;
-    padding: 0 5%;
+    padding: 0 4rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   #top .coreheat__box {
-    padding: 0 7.5%;
+    padding: 0 12rem;
   }
 }
 #top .coreheat__ttl {
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
   color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 2.4rem;
 }
 #top .coreheat__ttl::before, #top .coreheat__ttl::after {
   content: "";
@@ -391,58 +410,46 @@ body {
 }
 @media screen and (min-width: 768px) {
   #top .coreheat__ttl {
-    margin-bottom: 72px;
-    font-size: 40px;
+    margin-bottom: 7.2rem;
+    font-size: 4rem;
   }
-}
-@media screen and (min-width: 1024px) {
-  #top .coreheat__ttl {
-    margin-bottom: 100px;
-    font-size: 56px;
+  #top .coreheat__ttl::before, #top .coreheat__ttl::after {
+    width: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
   #top .coreheat__ttl {
-    gap: 48px;
-    font-size: 64px;
-  }
-  #top .coreheat__ttl::before, #top .coreheat__ttl::after {
-    width: 50px;
-    height: 6px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  #top .coreheat__ttl {
-    margin-bottom: 120px;
-    font-size: 80px;
+    margin-bottom: 12rem;
+    font-size: 8rem;
+    gap: 4rem;
   }
 }
 @media screen and (min-width: 768px) {
   #top .coreheat__ttl {
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   #top .coreheat__ttl {
-    margin-bottom: 48px;
+    margin-bottom: 4.8rem;
   }
 }
 #top .coreheat__txt-wrap {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 768px) {
   #top .coreheat__txt-wrap {
-    margin-bottom: 42px;
+    margin-bottom: 4.2rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #top .coreheat__txt-wrap {
-    margin-bottom: 50px;
+    margin-bottom: 5rem;
   }
 }
 #top .coreheat__txt {
-  margin-bottom: 28px;
-  font-size: 14px;
+  margin-bottom: 1.4rem;
+  font-size: 1.4rem;
   line-height: 1.3;
 }
 #top .coreheat__txt:last-of-type {
@@ -450,36 +457,28 @@ body {
 }
 @media screen and (min-width: 768px) {
   #top .coreheat__txt {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #top .coreheat__txt {
-    font-size: 20px;
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #top .coreheat__txt {
-    font-size: 24px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  #top .coreheat__txt {
-    font-size: 30px;
+    margin-bottom: 3rem;
+    font-size: 3rem;
   }
 }
 #top .coreheat__btn {
   margin: 0 auto;
-  width: 100px;
-  height: 25px;
+  width: 10rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 39px;
+  border-radius: 3.9rem;
   background: #CE46B0;
   color: #fff;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   text-decoration: none;
 }
