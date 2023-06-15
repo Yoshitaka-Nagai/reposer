@@ -26,11 +26,11 @@
 
   .coreheat {
     padding: 0 2rem;
-    margin-bottom: 3.2rem;
+    margin-bottom: 8rem;
 
     @media screen and (min-width: 768px) {
       padding: 0;
-      margin-bottom: 15.6rem;
+      margin-bottom: 10.5rem;
     }
 
     @media screen and (min-width: 1280px) {
@@ -150,14 +150,36 @@
       background: $white;
       position: relative;
 
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-2rem, -75%);
+        width: 12.9rem;
+        height: 12.9rem;
+        border-radius: 50%;
+        background: url(../../images/top/menu_recommend.png) center center / cover;
+      }
+
       @media screen and (min-width: 768px) {
         margin: 0 2.8rem 7.2rem;
         padding: 12rem 2.8rem;
+
+        &::before {
+          transform: translate(-2rem, -50%);
+          width: 200px;
+          height: 200px;
+        }
       }
 
       @media screen and (min-width: 1280px) {
         margin: 0 48rem 24.2rem;
         padding: 7rem 4rem;
+
+        &::before {
+          transform: translate(-50%, -50%);
+        }
       }
     }
 
