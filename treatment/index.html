@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ↓ レスポンシブ対応に必須の記述 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ↓ 電話番号を入力した際に自動的リンクを切る-->
+  <!-- 電話番号をクリックした時、自動電話機能を入れたい場合a要素で指定 -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- ↓ 検索結果画面で表示される文言 -->
+  <meta name="description" content="">
+  <!-- ↓ 検索ワードをカンマ区切りでcontent内に指定-->
+  <meta name="keywords" content="">
+  <!-- ↓ 検索にヒットしないようにする(noindex) リンクとの関係性を切る（nofollow）-->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- twitterの設定 -->
+  <!-- ↓ twitterでリンクに画像を表示 -->
+  <meta name="twitter:card" content="summary">
+  <!-- ↓ @ユーザ名を入力（任意 -->
+  <meta name="twitter:site" content="@username">
+  <!-- ↓ そのページの概要を記述する（任意 -->
+  <meta name="twitter:description" content="">
+  <!-- ↓ そのページのタイトルを入力※短くする-->
+  <meta name="twitter:title" content="">
+  <!-- ↓ ページのコンテンツを表す任意の画像 -->
+  <!-- 画像サイズは144px～4096pxまで。サイズは5MBまで。gif・jpg・png・webpのみ対応(アニメーションは非対応) -->
+  <meta name="twitter:image" content="絶対パス">
+
+  <!-- twitter以外の外部サービス連携設定 -->
+  <!-- ↓ このページのタイトルを記入 -->
+  <meta property="og:title" content="">
+  <!-- ↓ 通常のサイトはcontent="website" -->
+  <meta property="og:type" content="website">
+  <!-- ↓ ページのurlを記入 -->
+  <meta property="og:url" content="絶対パス">
+  <!-- ↓ ページの概要説明を記入 -->
+  <meta property="og:description" content="">
+  <!-- ↓ サイト名 -->
+  <meta property="og:site_name" content="">
+  <!-- ↓ ページリンクを貼り付けた際の画像 -->
+  <meta property="og:image" content="絶対パス">
+
+  <!-- ↓ ファビコン設定 -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- ↓ iOSホーム画面にリンクを置いた際に表示されるアイコン -->
+  <!-- 画像ファイルの名前は「apple-touch-icon.png」 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="画像への相対パス">
+
+  <title>Reposer ｜ 施術例</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="treatment">
+  <div class="wrapper">
+    <header id="header" class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="../index.html" class="header__logo-link">
+            <img src="../images/common/logo_reposer.png" alt="Reposer" class="header__logo-img">
+          </a>
+        </h1>
+        <div class="header__box">
+          <nav id="gnav" class="gnav">
+            <ul class="gnav__ul">
+              <li class="gnav__li"><a href="../index.html#coreheat" class="gnav__link">Coreheat</a></li>
+              <li class="gnav__li"><a href="../index.html#menu" class="gnav__link">Menu</a></li>
+              <li class="gnav__li"><a href="../index.html#instagram" class="gnav__link">Instagram</a></li>
+              <li class="gnav__li"><a href="../index.html#gallery" class="gnav__link">Gallery</a></li>
+              <li class="gnav__li"><a href="../index.html#access" class="gnav__link">Access</a></li>
+            </ul>
+          </nav>
+          <a href="" class="header__reserve-link">RESERVE<br><span>予約</span></a>
+          <div id="hamburger-menu" class="hamburger-menu">
+            <span class="hamburger-menu__top"></span>
+            <span class="hamburger-menu__middle"></span>
+            <span class="hamburger-menu__bottom"></span>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <main class="main">
+
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo-link">
+          <img src="../images/common/logo_reposer.png" alt="Reposer" class="footer__logo-img">
+        </a>
+        <div class="footer__info">
+          <div class="footer__address-wrap">
+            <p class="footer__post">〒060-0005</p>
+            <p class="footer__address">
+              札幌市中央区北5条西6丁目1-23<br class="footer__br">第一道通ビル1F
+            </p>
+          </div>
+          <p class="footer__tel">TEL　011-522-5909</p>
+          <p class="footer__station">最寄り駅　札幌駅　徒歩5分</p>
+          <p class="footer__business-hours">営業時間　10：00～21：00</p>
+          <p class="footer__holiday">定休日　不定休</p>
+          <p class="footer__parking">駐車場無し　有料パーキング近隣にあり</p>
+        </div>
+        <ul class="footer__sns-wrap">
+          <li class="footer__list">
+            <a href="" class="footer__sns-link">
+              <img src="../images/common/logo_instagram.png" alt="instagramロゴ" class="footer__sns-img">
+            </a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__sns-link">
+              <img src="../images/common/logo_facebook.png" alt="facebookロゴ" class="footer__sns-img">
+            </a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__sns-link">
+              <img src="../images/common/logo_youtube.png" alt="youtubeロゴ" class="footer__sns-img">
+            </a>
+          </li>
+          <li class="footer__list">
+            <a href="" class="footer__sns-link">
+              <img src="../images/common/logo_tiktok.png" alt="tiktokロゴ" class="footer__sns-img">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright-wrap">
+        <p class="footer__copyright">Copyright &copy; 2023 <br class="footer__copyright-br">Core Heat×Hifu Reposer All
+          Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="../js/common.js"></script>
+</body>
+
+</html>
