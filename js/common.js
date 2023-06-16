@@ -1,5 +1,5 @@
 //全ページ共通のJS
-document.addEventListener('DOMContentLoaded', function () {
+$(function () {
   //ヘッダー
   const header = document.getElementById('header');
 
@@ -11,6 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //
   const hrefLink = document.querySelectorAll('a[href^="#"]');
+
+  //現在のページURLのハッシュ部分を取得
+  const hash = location.hash;
+
+  //ハッシュ部分がある場合の条件分岐
+  if (hash) {
+    //ページ遷移後のスクロール位置指定
+    $("html, body").stop().scrollTop(0);
+    //処理を遅らせる
+    setTimeout(function () {
+      const headerHeight = header.clientHeight;
+      //リンク先を取得
+      const target = $(hash);
+      //リンク先までの距離を取得
+      const position = target.offset().top - headerHeight;
+      //指定の場所までスムーススクロール
+      $("html, body").animate({ scrollTop: position }, 500, "swing");
+    }, 100);
+  }
 
   //ハンバーガーメニュークリック時処理
   hamburgerMenu.addEventListener('click', function () {
@@ -39,4 +58,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-}, false);
+});
