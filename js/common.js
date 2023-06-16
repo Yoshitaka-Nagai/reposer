@@ -9,6 +9,12 @@ $(function () {
   //グローバルナビゲーション
   const gnav = document.getElementById('gnav');
 
+  //js-クラス付与対象リスト
+  const jsTargetList = document.querySelectorAll('.js-target, .js-fadeIn, .js-fadeUp');
+
+  //
+  const adjustmentNumber = 0.5;
+
   //
   const hrefLink = document.querySelectorAll('a[href^="#"]');
 
@@ -30,6 +36,10 @@ $(function () {
       $("html, body").animate({ scrollTop: position }, 400, "swing");
     }, 100);
   }
+
+  window.addEventListener('scroll', function () {
+    setJsTargetActive();
+  });
 
   //ハンバーガーメニュークリック時処理
   hamburgerMenu.addEventListener('click', function () {
@@ -57,5 +67,17 @@ $(function () {
       gnav.classList.remove('is-active');
     });
   });
+
+  //対象にクラス付与
+  function setJsTargetActive() {
+    const windowHeight = window.innerHeight;
+    const st = window.scrollY;
+    jsTargetList.forEach((e) => {
+      const position = e.getBoundingClientRect().top + st;
+      if (st > position - windowHeight * adjustmentNumber) {
+        e.classList.add('js-active');
+      }
+    });
+  }
 
 });

@@ -57,6 +57,22 @@
     font-family: $inter;
     font-size: 25px;
     font-weight: 700;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: $black;
+      transition: 0.4s;
+      transform: scaleX(0);
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
 
     @media screen and (min-width: 768px) {
       font-size: 30px;
