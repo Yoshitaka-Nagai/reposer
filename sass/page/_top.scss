@@ -505,35 +505,4 @@
       }
     }
   }
-
-  .access {
-    margin-bottom: 3.2rem;
-
-    @media screen and (min-width: 768px) {
-      margin-bottom: 7.5rem;
-    }
-
-    @media screen and (min-width: 1280px) {
-      margin-bottom: 24rem;
-    }
-
-    &__ttl {
-      @include section-title;
-    }
-
-    &__map-wrap {
-      iframe {
-        width: 100%;
-        aspect-ratio: 375/270;
-
-        @media screen and (min-width: 768px) {
-          aspect-ratio: 768/270;
-        }
-
-        @media screen and (min-width: 1280px) {
-          aspect-ratio: 1920/670;
-        }
-      }
-    }
-  }
 }

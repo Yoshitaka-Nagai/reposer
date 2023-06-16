@@ -12,7 +12,7 @@ $(function () {
   //
   const hrefLink = document.querySelectorAll('a[href^="#"]');
 
-  //現在のページURLのハッシュ部分を取得
+  //現在のページURLのハッシュ
   const hash = location.hash;
 
   //ハッシュ部分がある場合の条件分岐
@@ -27,7 +27,7 @@ $(function () {
       //リンク先までの距離を取得
       const position = target.offset().top - headerHeight;
       //指定の場所までスムーススクロール
-      $("html, body").animate({ scrollTop: position }, 500, "swing");
+      $("html, body").animate({ scrollTop: position }, 400, "swing");
     }, 100);
   }
 

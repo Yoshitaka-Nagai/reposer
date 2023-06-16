@@ -319,6 +319,67 @@ body {
   top: 65%;
 }
 
+.footer .access {
+  margin-bottom: 3.2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer .access {
+    margin-bottom: 7.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .access {
+    margin-bottom: 24rem;
+  }
+}
+.footer .access__ttl {
+  margin-bottom: 3.2rem;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+.footer .access__ttl::before, .footer .access__ttl::after {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background: #000;
+}
+@media screen and (min-width: 768px) {
+  .footer .access__ttl {
+    margin-bottom: 7.2rem;
+    font-size: 4rem;
+  }
+  .footer .access__ttl::before, .footer .access__ttl::after {
+    width: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .access__ttl {
+    margin-bottom: 12rem;
+    font-size: 8rem;
+    gap: 4rem;
+  }
+}
+.footer .access__map-wrap iframe {
+  width: 100%;
+  aspect-ratio: 375/270;
+}
+@media screen and (min-width: 768px) {
+  .footer .access__map-wrap iframe {
+    aspect-ratio: 768/270;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .access__map-wrap iframe {
+    aspect-ratio: 1920/670;
+  }
+}
 .footer__inner {
   padding: 0 2rem;
   margin-bottom: 4rem;
@@ -1128,22 +1189,49 @@ body {
     font-size: 5rem;
   }
 }
-#top .access {
-  margin-bottom: 3.2rem;
+
+#treatment .mv {
+  margin-top: 9.3rem;
+  margin-bottom: 4.8rem;
 }
 @media screen and (min-width: 768px) {
-  #top .access {
-    margin-bottom: 7.5rem;
+  #treatment .mv {
+    margin-top: 11.2rem;
+    margin-bottom: 10.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  #top .access {
-    margin-bottom: 24rem;
+  #treatment .mv {
+    margin-top: 20.2rem;
+    margin-bottom: 13.9rem;
   }
 }
-#top .access__ttl {
+#treatment .mv__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#treatment .treatment-area {
+  background: #741332;
+  padding: 3.6rem 2.2rem 5.2rem;
+  margin-bottom: 4.4rem;
+}
+@media screen and (min-width: 768px) {
+  #treatment .treatment-area {
+    padding: 9.5rem 6rem 5.8rem;
+    margin-bottom: 8.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #treatment .treatment-area {
+    padding: 15.2rem 36rem 11.2rem;
+    margin-bottom: 18.8rem;
+  }
+}
+#treatment .treatment-area__ttl {
   margin-bottom: 3.2rem;
-  color: #000;
+  color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 3rem;
   font-weight: 700;
@@ -1153,39 +1241,160 @@ body {
   align-items: center;
   gap: 2.4rem;
 }
-#top .access__ttl::before, #top .access__ttl::after {
+#treatment .treatment-area__ttl::before, #treatment .treatment-area__ttl::after {
   content: "";
   width: 30px;
   height: 5px;
   background: #000;
 }
 @media screen and (min-width: 768px) {
-  #top .access__ttl {
+  #treatment .treatment-area__ttl {
     margin-bottom: 7.2rem;
     font-size: 4rem;
   }
-  #top .access__ttl::before, #top .access__ttl::after {
+  #treatment .treatment-area__ttl::before, #treatment .treatment-area__ttl::after {
     width: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
-  #top .access__ttl {
+  #treatment .treatment-area__ttl {
     margin-bottom: 12rem;
     font-size: 8rem;
     gap: 4rem;
   }
 }
-#top .access__map-wrap iframe {
-  width: 100%;
-  aspect-ratio: 375/270;
+#treatment .treatment-area__ttl::before, #treatment .treatment-area__ttl::after {
+  display: none;
 }
 @media screen and (min-width: 768px) {
-  #top .access__map-wrap iframe {
-    aspect-ratio: 768/270;
+  #treatment .treatment-area__ttl {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #treatment .treatment-area__ttl {
+    font-size: 8rem;
+  }
+}
+#treatment .treatment-area__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 768px) {
+  #treatment .treatment-area__ul {
+    gap: 6rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  #top .access__map-wrap iframe {
-    aspect-ratio: 1920/670;
+  #treatment .treatment-area__ul {
+    gap: 10rem;
   }
+}
+#treatment .treatment-area__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 3.4rem 2.3rem 5.7rem;
+}
+@media screen and (min-width: 768px) {
+  #treatment .treatment-area__list {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3.5rem 3.6rem 6.7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #treatment .treatment-area__list {
+    padding: 6.6rem 6.4rem 11.8rem;
+  }
+}
+#treatment .treatment-area__box-left {
+  margin-bottom: 3.7rem;
+}
+@media screen and (min-width: 768px) {
+  #treatment .treatment-area__box-left {
+    margin-bottom: 0;
+    width: 48%;
+  }
+}
+#treatment .treatment-area__sub-ttl {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  #treatment .treatment-area__sub-ttl {
+    margin-bottom: 2.9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #treatment .treatment-area__sub-ttl {
+    font-size: 4rem;
+    margin-bottom: 5.9rem;
+  }
+}
+#treatment .treatment-area__txt {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1.4rem;
+}
+#treatment .treatment-area__txt:last-of-type {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1280px) {
+  #treatment .treatment-area__txt {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+#treatment .treatment-area__box-right {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+#treatment .treatment-area__box-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.9rem;
+  height: 1.9rem;
+  background: url(../images/treatment/arrow.svg) center center/cover;
+}
+@media screen and (min-width: 768px) {
+  #treatment .treatment-area__box-right {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #treatment .treatment-area__box-right::before {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+#treatment .treatment-area__img-wrap {
+  width: 40%;
+  height: 24.2rem;
+  background: #d9d9d9;
+}
+@media screen and (min-width: 1280px) {
+  #treatment .treatment-area__img-wrap {
+    width: 43%;
+    height: 45rem;
+  }
+}
+#treatment .treatment-area__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
