@@ -433,17 +433,89 @@
     &__inner {
     }
 
-    &__ul {
+    &__ul-top,
+    &__ul-bottom {
       padding: 1rem;
       display: flex;
       justify-content: space-between;
+      position: relative;
+
+      & li:nth-of-type(n + 7) {
+        display: none;
+      }
 
       @media screen and (min-width: 768px) {
         padding: 1.4rem;
+
+        & li:nth-of-type(n + 7) {
+          display: block;
+        }
       }
 
       @media screen and (min-width: 1280px) {
-        padding: 2.8rem;
+        padding: 2rem;
+      }
+    }
+
+    &__ul-bottom {
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        width: 1rem;
+        height: calc(100% - 2rem);
+        background: $black;
+        z-index: 1;
+      }
+
+      & li:nth-of-type(1) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100%;
+          background: rgba(229, 229, 229, 0.95);
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        &::before {
+          top: 1.4rem;
+          width: 1.4rem;
+          height: calc(100% - 2.8rem);
+        }
+
+        & li:nth-of-type(1) {
+          &::before {
+            display: none;
+          }
+        }
+
+        & li:nth-of-type(5) {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background: rgba(229, 229, 229, 0.95);
+          }
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        &::before {
+          top: 2rem;
+          width: 2rem;
+          height: calc(100% - 4rem);
+        }
       }
     }
 
@@ -451,6 +523,7 @@
       list-style-type: none;
       width: 4.8rem;
       height: 3.9rem;
+      position: relative;
 
       &.bg-white {
         background: $white;
@@ -458,7 +531,7 @@
 
       @media screen and (min-width: 1280px) {
         width: 12rem;
-        height: 10rem;
+        height: 8.8rem;
       }
     }
 
@@ -488,32 +561,37 @@
 
     &__ttl {
       font-family: $inter;
-      font-size: 6rem;
+      font-size: 5.8rem;
       font-weight: 400;
       writing-mode: vertical-rl;
+      text-align: center;
 
       @media screen and (min-width: 768px) {
         margin-right: 1.6rem;
-        font-size: 9rem;
+        font-size: 8.2rem;
       }
 
       @media screen and (min-width: 1280px) {
         margin-right: 2.4rem;
-        font-size: 23rem;
+        font-size: 15rem;
       }
     }
 
     &__pic {
       width: 80%;
       height: 20.4rem;
+      padding: 0 3rem;
+      position: relative;
 
       @media screen and (min-width: 768px) {
-        width: 70%;
+        width: 63.5%;
         height: 30.4rem;
+        padding: 0 4.5rem;
       }
 
       @media screen and (min-width: 1280px) {
-        height: 76rem;
+        height: 55rem;
+        padding: 0 5.8rem;
       }
     }
 
@@ -521,22 +599,37 @@
       @include img-base;
       height: 100%;
       object-fit: contain;
-    }
-
-    &__ul-wrap {
-      position: relative;
-      background: rgba(229, 229, 229, 0.95);
+      background: $white;
     }
 
     &__view-title {
       position: absolute;
-      top: 50%;
+      bottom: 0;
       left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2rem;
+      transform: translate(-50%, calc(1rem + 100%));
+      font-size: 1.8rem;
+      line-height: 3.9rem;
+      white-space: nowrap;
+      z-index: 1;
+
+      @media screen and (min-width: 768px) {
+        transform: translate(-50%, calc(1.4rem + 100%));
+      }
 
       @media screen and (min-width: 1280px) {
-        font-size: 5rem;
+        transform: translate(-50%, calc(2rem + 100%));
+        font-size: 4rem;
+        line-height: 8.8rem;
+      }
+    }
+
+    &__empty-box {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+        background: $white;
+        width: 6.5%;
       }
     }
   }
