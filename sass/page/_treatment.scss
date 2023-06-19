@@ -41,14 +41,6 @@
       &::after {
         display: none;
       }
-
-      @media screen and (min-width: 768px) {
-        font-size: 5rem;
-      }
-
-      @media screen and (min-width: 768px) {
-        font-size: 8rem;
-      }
     }
 
     &__ul {
@@ -105,7 +97,7 @@
       }
 
       @media screen and (min-width: 1280px) {
-        font-size: 4rem;
+        font-size: 3.6rem;
         margin-bottom: 5.9rem;
       }
     }
@@ -114,6 +106,7 @@
       font-size: 1.3rem;
       font-weight: 300;
       line-height: 1.5;
+      letter-spacing: 0.03em;
       margin-bottom: 1.4rem;
 
       &:last-of-type {
@@ -121,8 +114,8 @@
       }
 
       @media screen and (min-width: 1280px) {
-        font-size: 2.5rem;
-        margin-bottom: 2.5rem;
+        font-size: 2.4rem;
+        margin-bottom: 2.4rem;
       }
     }
 

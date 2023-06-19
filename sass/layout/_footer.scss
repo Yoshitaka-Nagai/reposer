@@ -22,7 +22,7 @@
         aspect-ratio: 375/270;
 
         @media screen and (min-width: 768px) {
-          aspect-ratio: 768/270;
+          aspect-ratio: 768/400;
         }
 
         @media screen and (min-width: 1280px) {
@@ -49,7 +49,7 @@
   }
 
   &__logo-link {
-    width: 17rem;
+    width: 14rem;
     margin-bottom: 0.8rem;
     display: block;
     padding: 10px 0;
@@ -61,13 +61,13 @@
     }
 
     @media screen and (min-width: 768px) {
-      width: 22rem;
+      width: 18rem;
       margin-bottom: 1.4rem;
     }
 
     @media screen and (min-width: 1280px) {
-      width: 28rem;
-      margin-bottom: 2rem;
+      width: 24rem;
+      margin-bottom: 2.4rem;
     }
   }
 
@@ -81,11 +81,11 @@
       line-height: 1.5;
 
       @media screen and (min-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       @media screen and (min-width: 1280px) {
-        font-size: 3rem;
+        font-size: 2.4rem;
       }
     }
   }
@@ -126,7 +126,7 @@
     @media screen and (min-width: 1280px) {
       right: 24rem;
       row-gap: 2.4rem;
-      width: 10rem;
+      width: 8rem;
     }
   }
 
@@ -174,11 +174,11 @@
     line-height: 1.5;
 
     @media screen and (min-width: 768px) {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     @media screen and (min-width: 1280px) {
-      font-size: 3rem;
+      font-size: 1.8rem;
     }
   }
 

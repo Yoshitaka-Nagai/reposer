@@ -39,8 +39,8 @@
   }
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 12rem;
-    font-size: 8rem;
+    margin-bottom: 10rem;
+    font-size: 6rem;
     gap: 4rem;
   }
 }
@@ -49,7 +49,7 @@
 @mixin btn-base {
   margin: 0 auto;
   width: 10rem;
-  height: 2.5rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +58,7 @@
   background: $pink;
   color: $white;
   font-family: $inter;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
   transition: 0.4s;
@@ -71,12 +71,12 @@
   @media screen and (min-width: 768px) {
     width: 15rem;
     height: 4.5rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   @media screen and (min-width: 1280px) {
     width: 17rem;
     height: 6rem;
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
