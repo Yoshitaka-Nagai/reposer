@@ -105,6 +105,30 @@ input, select {
   vertical-align: middle;
 }
 
+@keyframes bgMoveSp {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20rem 0;
+  }
+}
+@keyframes bgMoveTab {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 45rem 0;
+  }
+}
+@keyframes bgMovePc {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 110rem 0;
+  }
+}
 @keyframes bgRotate {
   100% {
     transform: rotate(1900deg);
@@ -153,7 +177,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .header__inner {
-    height: 80px;
+    height: 90px;
     padding: 0 0 0 6rem;
   }
 }
@@ -179,7 +203,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .header__logo-img {
-    width: 115px;
+    width: 130px;
   }
 }
 .header__box {
@@ -357,7 +381,7 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 25%;
+  left: 30%;
   width: 75rem;
   height: 75rem;
   background-image: url(../images/common/footer_bg.png);
@@ -634,19 +658,47 @@ body {
   }
 }
 #top .coreheat {
-  padding: 0 2rem;
-  margin-bottom: 8rem;
+  padding: 0 2rem 8rem;
   position: relative;
+  overflow: hidden;
+}
+#top .coreheat::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 150%;
+  height: 6rem;
+  background-image: url(../../images/top/coreheat_bg.png);
+  background-size: 20rem 100%;
+  animation-name: bgMoveSp;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: -1;
 }
 @media screen and (min-width: 768px) {
   #top .coreheat {
-    padding: 0;
-    margin-bottom: 10.5rem;
+    padding: 0 0 10.5rem;
+  }
+  #top .coreheat::before {
+    top: 55%;
+    height: 12rem;
+    background-size: 45rem 100%;
+    animation-name: bgMoveTab;
+    animation-duration: 8s;
   }
 }
 @media screen and (min-width: 1280px) {
   #top .coreheat {
-    margin-bottom: 11.3rem;
+    padding: 0 0 11.3rem;
+  }
+  #top .coreheat::before {
+    height: 25rem;
+    background-size: 110rem 100%;
+    animation-name: bgMovePc;
+    animation-duration: 10s;
   }
 }
 #top .coreheat__inner {
