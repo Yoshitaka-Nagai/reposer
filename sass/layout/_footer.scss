@@ -1,6 +1,44 @@
 @use "../global" as *;
 
 .footer {
+  overflow: hidden;
+  position: relative;
+  padding-top: 3.2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 75rem;
+    height: 75rem;
+    background-image: url(../images/common/footer_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    animation: bgRotate 380s linear infinite;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 7.5rem;
+
+    &::before {
+      left: 35%;
+      width: 115rem;
+      height: 115rem;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 24rem;
+
+    &::before {
+      left: 45%;
+      width: 235rem;
+      height: 235rem;
+    }
+  }
+
   .access {
     margin-bottom: 3.2rem;
 

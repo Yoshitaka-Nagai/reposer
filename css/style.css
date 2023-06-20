@@ -105,6 +105,11 @@ input, select {
   vertical-align: middle;
 }
 
+@keyframes bgRotate {
+  100% {
+    transform: rotate(1900deg);
+  }
+}
 html {
   font-size: 2.6666666667vw;
 }
@@ -343,6 +348,44 @@ body {
   top: 65%;
 }
 
+.footer {
+  overflow: hidden;
+  position: relative;
+  padding-top: 3.2rem;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 75rem;
+  height: 75rem;
+  background-image: url(../images/common/footer_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  animation: bgRotate 380s linear infinite;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 7.5rem;
+  }
+  .footer::before {
+    left: 35%;
+    width: 115rem;
+    height: 115rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding-top: 24rem;
+  }
+  .footer::before {
+    left: 45%;
+    width: 235rem;
+    height: 235rem;
+  }
+}
 .footer .access {
   margin-bottom: 3.2rem;
 }
@@ -1143,18 +1186,7 @@ body {
   }
 }
 #top .gallery {
-  margin-bottom: 3.2rem;
   background: #000;
-}
-@media screen and (min-width: 768px) {
-  #top .gallery {
-    margin-bottom: 7.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  #top .gallery {
-    margin-bottom: 24rem;
-  }
 }
 #top .gallery__ul-top, #top .gallery__ul-bottom {
   padding: 1rem;
@@ -1370,18 +1402,15 @@ body {
 #treatment .treatment-area {
   background: #741332;
   padding: 3.6rem 2.2rem 5.2rem;
-  margin-bottom: 4.4rem;
 }
 @media screen and (min-width: 768px) {
   #treatment .treatment-area {
     padding: 9.5rem 6rem 5.8rem;
-    margin-bottom: 8.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #treatment .treatment-area {
     padding: 15.2rem 36rem 11.2rem;
-    margin-bottom: 18.8rem;
   }
 }
 #treatment .treatment-area__ttl {
@@ -1569,18 +1598,15 @@ body {
 }
 #staff .staff-area {
   padding: 0 2.4rem;
-  margin-bottom: 4.4rem;
 }
 @media screen and (min-width: 768px) {
   #staff .staff-area {
     padding: 0 2.7rem;
-    margin-bottom: 8.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #staff .staff-area {
     padding: 0 33rem;
-    margin-bottom: 18.8rem;
   }
 }
 #staff .staff-area__ul {

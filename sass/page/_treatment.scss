@@ -23,16 +23,13 @@
   .treatment-area {
     background: $dark-red;
     padding: 3.6rem 2.2rem 5.2rem;
-    margin-bottom: 4.4rem;
 
     @media screen and (min-width: 768px) {
       padding: 9.5rem 6rem 5.8rem;
-      margin-bottom: 8.6rem;
     }
 
     @media screen and (min-width: 1280px) {
       padding: 15.2rem 36rem 11.2rem;
-      margin-bottom: 18.8rem;
     }
 
     &__ttl {
