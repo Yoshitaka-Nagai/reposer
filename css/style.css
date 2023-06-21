@@ -105,6 +105,14 @@ input, select {
   vertical-align: middle;
 }
 
+@keyframes mvShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes bgMoveSp {
   0% {
     background-position: 0 0;
@@ -127,6 +135,11 @@ input, select {
   }
   100% {
     background-position: 110rem 0;
+  }
+}
+@keyframes showHeader {
+  100% {
+    transform: translateY(0);
   }
 }
 @keyframes bgRotate {
@@ -162,6 +175,8 @@ body {
   top: 0;
   left: 0;
   z-index: 10;
+  transform: translateY(-100%);
+  animation: showHeader 0.6s 1.2s forwards;
 }
 .header__inner {
   display: flex;
@@ -633,6 +648,13 @@ body {
 #top .mv {
   margin-bottom: 3.6rem;
   margin-top: 76px;
+  opacity: 0;
+}
+#top .mv.showed {
+  opacity: 1;
+}
+#top .mv.first {
+  animation: mvShow 0.8s 0.6s forwards;
 }
 @media screen and (min-width: 768px) {
   #top .mv {
@@ -1333,6 +1355,10 @@ body {
      object-fit: cover;
   height: 100%;
   cursor: pointer;
+  transition: 0.4s;
+}
+#top .gallery__thumb-img:hover {
+  opacity: 0.7;
 }
 #top .gallery__box {
   display: flex;
@@ -1432,6 +1458,13 @@ body {
 #treatment .mv {
   margin-top: 9.3rem;
   margin-bottom: 4.8rem;
+  opacity: 0;
+}
+#treatment .mv.showed {
+  opacity: 1;
+}
+#treatment .mv.first {
+  animation: mvShow 0.8s 0.6s forwards;
 }
 @media screen and (min-width: 768px) {
   #treatment .mv {
@@ -1523,18 +1556,18 @@ body {
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding: 3.4rem 2.3rem 5.7rem;
+  padding: 3.4rem 2.3rem;
 }
 @media screen and (min-width: 768px) {
   #treatment .treatment-area__list {
     flex-direction: row;
     justify-content: space-between;
-    padding: 3.5rem 3.6rem 6.7rem;
+    padding: 3.5rem 3.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
   #treatment .treatment-area__list {
-    padding: 6.6rem 6.4rem 11.8rem;
+    padding: 6.6rem 6.4rem;
   }
 }
 #treatment .treatment-area__box-left {
@@ -1629,6 +1662,13 @@ body {
 #staff .mv {
   margin-top: 9.3rem;
   margin-bottom: 4.8rem;
+  opacity: 0;
+}
+#staff .mv.showed {
+  opacity: 1;
+}
+#staff .mv.first {
+  animation: mvShow 0.8s 0.6s forwards;
 }
 @media screen and (min-width: 768px) {
   #staff .mv {

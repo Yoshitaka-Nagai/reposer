@@ -3,6 +3,9 @@ $(function () {
   //ヘッダー
   const header = document.getElementById('header');
 
+  //mv
+  const mv = document.getElementById('mv');
+
   //ハンバーガーメニュー
   const hamburgerMenu = document.getElementById('hamburger-menu');
 
@@ -79,5 +82,15 @@ $(function () {
       }
     });
   }
+
+  function startMv() {
+    if (window.scrollY === 0) {
+      mv.classList.add('first');
+    } else {
+      mv.classList.add('showed');
+    }
+  }
+
+  startMv();
 
 });

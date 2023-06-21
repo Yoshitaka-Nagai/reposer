@@ -4,6 +4,15 @@
   .mv {
     margin-top: 9.3rem;
     margin-bottom: 4.8rem;
+    opacity: 0;
+
+    &.showed {
+      opacity: 1;
+    }
+
+    &.first {
+      animation: mvShow 0.8s 0.6s forwards;
+    }
 
     @media screen and (min-width: 768px) {
       margin-top: 11.2rem;
@@ -60,16 +69,16 @@
       flex-direction: column;
       align-items: center;
       background: $white;
-      padding: 3.4rem 2.3rem 5.7rem;
+      padding: 3.4rem 2.3rem;
 
       @media screen and (min-width: 768px) {
         flex-direction: row;
         justify-content: space-between;
-        padding: 3.5rem 3.6rem 6.7rem;
+        padding: 3.5rem 3.6rem;
       }
 
       @media screen and (min-width: 1280px) {
-        padding: 6.6rem 6.4rem 11.8rem;
+        padding: 6.6rem 6.4rem;
       }
     }
 

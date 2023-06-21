@@ -4,6 +4,15 @@
   .mv {
     margin-bottom: 3.6rem;
     margin-top: 76px;
+    opacity: 0;
+
+    &.showed {
+      opacity: 1;
+    }
+
+    &.first {
+      animation: mvShow 0.8s 0.6s forwards;
+    }
 
     @media screen and (min-width: 768px) {
       margin-bottom: 7.5rem;
@@ -452,9 +461,6 @@
   .gallery {
     background: $black;
 
-    &__inner {
-    }
-
     &__ul-top,
     &__ul-bottom {
       padding: 1rem;
@@ -561,6 +567,11 @@
       @include img-base;
       height: 100%;
       cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     &__box {
