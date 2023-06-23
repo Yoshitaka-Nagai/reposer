@@ -1264,9 +1264,8 @@ body {
   width: 20rem;
   height: 20rem;
   list-style-type: none;
-  background: #f2f2f2;
 }
-#top .instagram__list.limit {
+#top .instagram__list:nth-of-type(n + 4) {
   display: none;
 }
 @media screen and (min-width: 1280px) {
@@ -1274,9 +1273,25 @@ body {
     width: 30rem;
     height: 30rem;
   }
-  #top .instagram__list.limit {
+  #top .instagram__list:nth-of-type(n + 4) {
     display: block;
   }
+}
+#top .instagram__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+#top .instagram__link:hover {
+  opacity: 0.7;
+}
+#top .instagram__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 #top .gallery {
   background: #000;
