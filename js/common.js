@@ -15,25 +15,21 @@ $(function () {
   //js-クラス付与対象リスト
   const jsTargetList = document.querySelectorAll('.js-target, .js-fadeIn, .js-fadeUp');
 
-  //
+  //クラス付与の位置調整用
   const adjustmentNumber = 0.5;
 
-  //
+  //アンカーリンク
   const hrefLink = document.querySelectorAll('a[href^="#"]');
 
   //現在のページURLのハッシュ
   const hash = location.hash;
 
-  //ハッシュ部分がある場合の条件分岐
+  //ページ外リンクからの遷移時
   if (hash) {
-    //ページ遷移後のスクロール位置指定
     $("html, body").stop().scrollTop(0);
-    //処理を遅らせる
     setTimeout(function () {
       const headerHeight = header.clientHeight;
-      //リンク先を取得
       const target = $(hash);
-      //リンク先までの距離を取得
       const position = target.offset().top - headerHeight;
       //指定の場所までスムーススクロール
       $("html, body").animate({ scrollTop: position }, 400, "swing");
@@ -83,6 +79,7 @@ $(function () {
     });
   }
 
+  //mv表示処理
   function startMv() {
     if (window.scrollY === 0) {
       mv.classList.add('first');
@@ -91,6 +88,7 @@ $(function () {
     }
   }
 
+  //ページ表示時に実行
   startMv();
 
 });

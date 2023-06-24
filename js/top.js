@@ -1,3 +1,5 @@
+import { businessId, accessToken } from './instagram.js';
+
 //TOPページのJS
 $(function () {
 
@@ -26,15 +28,16 @@ $(function () {
     })
   });
 
+  //インスタグラムから最新5件取得、表示
   $.ajax({
     type: 'GET',
-    url: 'https://graph.facebook.com/v6.0/17841459885725162?fields=name%2Cmedia.limit(5)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cthumbnail_url%2Cmedia_type%2Cusername%7D&access_token=EAAxxTh5Ja7UBAEAZAimgtnbgSGPxqHpPsiJeVnBwqG25nVKln2CH9M3tXvJrbtEjZCaJlnJZBM8txd7l5ayZAjOBiNd5yzAIyig6uUZC7kmU7IqS405efBVKD6t7kAGBMDbZCY5HUNArDIDLqj5YgNW3v6cAVCT99iuddQZAU5E1O1nDErAXltBpWPtxElg2AwZD',
+    url: 'https://graph.facebook.com/v6.0/' + businessId + '?fields=name%2Cmedia.limit(5)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cthumbnail_url%2Cmedia_type%2Cusername%7D&access_token=' + accessToken,
     dataType: 'json',
     success: function (json) {
 
-      var html = '';
-      var insta = json.media.data;
-      for (var i = 0; i < insta.length; i++) {
+      let html = '';
+      const insta = json.media.data;
+      for (let i = 0; i < insta.length; i++) {
         var media_type = insta[i].media_type;
         if (media_type === "IMAGE" || media_type === "CAROUSEL_ALBUM") {
           html += '<li class="instagram__list"><a class="instagram__link" href="' + insta[i].permalink + '" target="_blank" rel="noopener noreferrer"><img class="instagram__img" src="' + insta[i].media_url + '"></a></li>';
