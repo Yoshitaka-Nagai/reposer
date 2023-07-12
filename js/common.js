@@ -42,9 +42,27 @@ $(function () {
 
   //ハンバーガーメニュークリック時処理
   hamburgerMenu.addEventListener('click', function () {
-    this.classList.toggle('opened');
-    gnav.classList.toggle('is-active');
+    if (this.classList.contains('opened')) {
+      this.classList.remove('opened');
+      gnav.classList.remove('is-active');
+
+      //スクロール禁止を解除
+      document.removeEventListener('touchmove', noScroll);
+      document.removeEventListener('wheel', noScroll);
+    } else {
+      this.classList.add('opened');
+      gnav.classList.add('is-active');
+
+      //メニューが開かれているときはスクロール禁止
+      document.addEventListener('touchmove', noScroll, { passive: false });
+      document.addEventListener('wheel', noScroll, { passive: false });
+    }
   });
+
+  //イベント処理禁止用
+  function noScroll(e) {
+    e.preventDefault();
+  }
 
   //ナビゲーションリンククリック時処理
   hrefLink.forEach(link => {
@@ -64,6 +82,10 @@ $(function () {
       //メニューを閉じる
       hamburgerMenu.classList.remove('opened');
       gnav.classList.remove('is-active');
+
+      //スクロール禁止を解除
+      document.removeEventListener('touchmove', noScroll);
+      document.removeEventListener('wheel', noScroll);
     });
   });
 
