@@ -1590,6 +1590,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  height: 300px;
   position: relative;
 }
 #treatment .treatment-area__ul::before {
@@ -1624,7 +1625,6 @@ body {
   align-items: center;
   background: #fff;
   padding: 3.4rem 2.3rem;
-  opacity: 0;
 }
 @media screen and (min-width: 768px) {
   #treatment .treatment-area__list {
