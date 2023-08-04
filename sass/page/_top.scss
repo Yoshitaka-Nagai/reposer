@@ -439,40 +439,17 @@
       @include section-title;
     }
 
-    &__ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3rem;
-
-      @media screen and (min-width: 768px) {
-        flex-direction: row;
-        justify-content: center;
-        gap: 3.6rem;
-      }
+    &__swiper {
+      width: 100%;
+      height: 20rem;
 
       @media screen and (min-width: 1280px) {
-        gap: 6rem;
+        height: 30rem;
       }
     }
 
     &__list {
-      width: 20rem;
-      height: 20rem;
-      list-style-type: none;
 
-      &:nth-of-type(n + 4) {
-        display: none;
-      }
-
-      @media screen and (min-width: 1280px) {
-        width: 30rem;
-        height: 30rem;
-
-        &:nth-of-type(n + 4) {
-          display: block;
-        }
-      }
     }
 
     &__link {

@@ -40,12 +40,28 @@ $(function () {
       for (let i = 0; i < insta.length; i++) {
         var media_type = insta[i].media_type;
         if (media_type === "IMAGE" || media_type === "CAROUSEL_ALBUM") {
-          html += '<li class="instagram__list"><a class="instagram__link" href="' + insta[i].permalink + '" target="_blank" rel="noopener noreferrer"><img class="instagram__img" src="' + insta[i].media_url + '"></a></li>';
+          html += '<div class="swiper-slide instagram__list"><a class="instagram__link" href="' + insta[i].permalink + '" target="_blank" rel="noopener noreferrer"><img class="instagram__img" src="' + insta[i].media_url + '"></a></div>';
         } else if (media_type === "VIDEO") {
-          html += '<li class="instagram__list"><a class="instagram__link" href="' + insta[i].permalink + '" target="_blank" rel="noopener noreferrer"><img class="instagram__img" src="' + insta[i].thumbnail_url + '"></a></li>';
+          html += '<div class="swiper-slide instagram__list"><a class="instagram__link" href="' + insta[i].permalink + '" target="_blank" rel="noopener noreferrer"><img class="instagram__img" src="' + insta[i].thumbnail_url + '"></a></div>';
         }
       }
-      $(".instagram__ul").append(html);
+      $(".instagram__swiper-wrapper").append(html);
+
+      const swiper = new Swiper('.instagram__swiper', {
+        spaceBetween: 100,
+        slidesPerView: 1,
+        breakpoints: {
+          768:{
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 5,
+          },
+        },
+        centeredSlides: true,
+        loop: true,
+        speed: 2000,
+      });
     },
     error: function () {
       console.log("インスタグラム画像取得にてエラーが発生しています。");
