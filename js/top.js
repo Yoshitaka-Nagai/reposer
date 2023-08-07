@@ -47,20 +47,39 @@ $(function () {
       }
       $(".instagram__swiper-wrapper").append(html);
 
-      const swiper = new Swiper('.instagram__swiper', {
-        spaceBetween: 100,
+      //最新2件にnewクラスを付与
+      document.querySelectorAll('.instagram__link')[0].classList.add('new');
+      document.querySelectorAll('.instagram__link')[1].classList.add('new');
+
+      const swiper = new Swiper('.swiper', {
+        spaceBetween: 60,
         slidesPerView: 1,
         breakpoints: {
           768:{
-            slidesPerView: 3,
+            spaceBetween: 80,
+            slidesPerView: 2,
           },
           1280: {
+            spaceBetween: 100,
+            slidesPerView: 3,
+          },
+          1440: {
             slidesPerView: 5,
           },
         },
         centeredSlides: true,
+        grabCursor: true,
         loop: true,
-        speed: 2000,
+        speed: 400,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'bullets'
+        },
       });
     },
     error: function () {
