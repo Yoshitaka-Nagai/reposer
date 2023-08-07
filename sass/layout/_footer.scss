@@ -148,7 +148,13 @@
     align-items: center;
     justify-content: space-between;
     row-gap: 0.8rem;
-    width: 9rem;
+    width: 13.5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 29%;
+    }
 
     @media screen and (min-width: 768px) {
       top: 50%;
@@ -157,19 +163,23 @@
       flex-wrap: nowrap;
       flex-direction: column;
       justify-content: center;
-      row-gap: 1.6rem;
+      row-gap: 0.8rem;
       width: 6.4rem;
+
+      &::after {
+        display: none;
+      }
     }
 
     @media screen and (min-width: 1280px) {
       right: 24rem;
-      row-gap: 2.4rem;
+      row-gap: 1rem;
       width: 8rem;
     }
   }
 
   &__list {
-    width: 46%;
+    width: 29%;
     list-style-type: none;
 
     @media screen and (min-width: 768px) {
