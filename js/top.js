@@ -31,7 +31,7 @@ $(function () {
   //インスタグラムから最新5件取得、表示
   $.ajax({
     type: 'GET',
-    url: 'https://graph.facebook.com/v6.0/' + businessId + '?fields=name%2Cmedia.limit(7)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cthumbnail_url%2Cmedia_type%2Cusername%7D&access_token=' + accessToken,
+    url: 'https://graph.facebook.com/v6.0/' + businessId + '?fields=name%2Cmedia.limit(10)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cthumbnail_url%2Cmedia_type%2Cusername%7D&access_token=' + accessToken,
     dataType: 'json',
     success: function (json) {
 
@@ -47,9 +47,8 @@ $(function () {
       }
       $(".instagram__swiper-wrapper").append(html);
 
-      //最新2件にnewクラスを付与
+      //最新1件にnewクラスを付与
       document.querySelectorAll('.instagram__link')[0].classList.add('new');
-      document.querySelectorAll('.instagram__link')[1].classList.add('new');
 
       const swiper = new Swiper('.swiper', {
         spaceBetween: 60,
